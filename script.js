@@ -3,7 +3,7 @@ function encriptar() {
 
     var texto = document.getElementById("areaEncriptar").value;
     if (/[A-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto)) {
-
+        alert("Los mensajes no pueden tener simbolos y/o mayusculas")
         return;
     }
 
@@ -25,6 +25,7 @@ function encriptar() {
 function desencriptar() {
     var texto = document.getElementById("areaEncriptar").value;
     if (/[A-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto)) {
+        alert("Los mensajes no pueden tener simbolos y/o mayusculas")
         return;
     }
 
