@@ -3,9 +3,9 @@ function encriptar() {
 
     var texto = document.getElementById("areaEncriptar").value;
     if (/[A-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto)) {
-        alert("Los mensajes no pueden tener simbolos y/o mayusculas")
+        document.getElementById("mensajeAlerta").style.display = "block";
         return;
-    }
+    } else{
 
     var txtEncriptado = texto.replace(/e/igm, "enter");
     txtEncriptado = txtEncriptado.replace(/o/igm, "ober");
@@ -16,18 +16,20 @@ function encriptar() {
     document.getElementById("areaDesencriptar").value = txtEncriptado;
     document.getElementById("areaEncriptar").value = "";
 
-    document.getElementById("btnEncriptar").disabled = true;    
     document.getElementById("btnDesencriptar").disabled = false;
+    document.getElementById("btnCopiar").disabled = false;
+    document.getElementById("mensajeAlerta").style.display = "none";
 
+    }
 }
 
 
 function desencriptar() {
     var texto = document.getElementById("areaEncriptar").value;
     if (/[A-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto)) {
-        alert("Los mensajes no pueden tener simbolos y/o mayusculas")
+        document.getElementById("mensajeAlerta").style.display = "block";
         return;
-    }
+    } else{
 
     var txtDesencriptado = texto.replace(/enter/igm, "e");
     txtDesencriptado = txtDesencriptado.replace(/ober/igm, "o");
@@ -37,11 +39,10 @@ function desencriptar() {
 
     document.getElementById("areaDesencriptar").value = txtDesencriptado;
     document.getElementById("areaEncriptar").value = "";
+    document.getElementById("mensajeAlerta").style.display = "none";
 
-    document.getElementById("btnEncriptar").disabled = false;
-    document.getElementById("btnDesencriptar").disabled = true;
+    }
 }
-
     function copiar() {
         let textoDesencriptado = document.querySelector("#areaDesencriptar").value;
         navigator.clipboard.writeText(textoDesencriptado)
@@ -52,6 +53,6 @@ function desencriptar() {
 
     }
     
-    
+
 
 

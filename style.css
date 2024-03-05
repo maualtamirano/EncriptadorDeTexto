@@ -3,7 +3,7 @@ html,body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    background: hsl(197, 97%, 76%)
 }
    
 
@@ -15,6 +15,7 @@ header {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
+    font-family: monospace;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -63,16 +64,17 @@ main {
 
 .boton {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #003366;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-family: monospace;
 }
 
 .boton:hover {
-    background-color: #0056b3;
+    background-color: #007bff;
+    transition: 10ms;
 }
 
 .boton:disabled {
@@ -84,13 +86,22 @@ main {
     background-color: #ccc;
 }
 
+#mensajeAlerta {
+    font-family: cursive;
+    color: red;
+    text-align: center;
+}
+
+
 footer {
     width: 100%;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px 20px;
     position: fixed;
     bottom: 0;
     text-align: center;
     font-weight: bold;
+    font-size: 13px;
+    font-family: monospace;
 }

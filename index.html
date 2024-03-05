@@ -17,10 +17,14 @@
          <input  type="text" class="inputs" id="areaEncriptar" placeholder="Ingrese el mensaje aqui">
          <input  type="text" class="inputs" id="areaDesencriptar" placeholder="Aun no hay ningun mensaje..." disabled>
         </div>
+        <div id="mensajeAlerta" style="display: none;">
+            <p>❗❗ Los mensajes no pueden tener simbolos y/o mayusculas.</p>
+        </div>
+        
         <div class="zonaBotones">
           <button class="boton" id="btnEncriptar" onclick="encriptar()">Encriptar</button>
           <button class="boton" id="btnDesencriptar" onclick="desencriptar()" disabled>Desencriptar</button>
-          <button class="boton" id="btnCopiar" onclick="copiar()">Copiar</button>  
+          <button class="boton" id="btnCopiar" onclick="copiar()" disabled>Copiar</button>  
         </div>
     
     </main>
